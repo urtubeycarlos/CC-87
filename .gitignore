@@ -50,6 +50,7 @@ Gemfile.lock
 .env
 /log/
 /log/development.log
+/test/
 # .ruby-version
 # .ruby-gemset
 
