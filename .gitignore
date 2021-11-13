@@ -48,6 +48,8 @@ build-iPhoneSimulator/
 Gemfile.lock
 /db/schema.rb
 .env
+/log/
+/log/development.log
 # .ruby-version
 # .ruby-gemset
 
