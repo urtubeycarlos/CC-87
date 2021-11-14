@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  # -----> routes <-----
+
+  # -----> end of routes <-----
+  # This is the last one for custom page not found. Important! -> LAST
+  match '*unmatched', to: 'application#page_not_found', via: :all
 end
