@@ -1,8 +1,4 @@
 class ApplicationController < ActionController::API
-  def page_not_found
-    render json: '418 I\'m a teapot', status: 418
-  end
-
   def authorize_request
     header = request.headers['Authorization']
     header.split(' ').last if header
