@@ -37,11 +37,17 @@ gem 'paranoia', '~> 2.4', '>= 2.4.3'
 # Pagination
 gem 'will_paginate'
 
+# Swagger
+gem 'rswag'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rubocop-rspec'
   gem 'database_cleaner'
+  gem 'rspec-rails'
+  # Swagger specs
+  gem 'rswag-specs'
 end
 
 group :development do
@@ -51,7 +57,6 @@ group :development do
 end
 
 group :test do
-  gem 'rspec-rails', '~> 5.0', '>= 5.0.1'
   gem 'simplecov', '~> 0.21.2', require: false
   gem 'database_cleaner-active_record', '~> 2.0'
 end
