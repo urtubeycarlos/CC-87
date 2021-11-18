@@ -29,6 +29,8 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'rack-cors'
 # Authentication
 gem 'jwt'
+# Authorization
+gem 'cancancan'
 # Serialization
 gem 'active_model_serializers', '~> 0.10.12'
 # Soft delete
