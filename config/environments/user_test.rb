@@ -5,6 +5,6 @@ class Message
   end
 
   def full_message
-    "#{"said:"} #{@message}"
+    "#{"Said:"} #{@message}"
   end
 end
