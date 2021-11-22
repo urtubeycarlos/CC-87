@@ -7,6 +7,13 @@ class UsersController < ApplicationController
     render json: users, stauts: :ok
   end
 
+  def show
+    return render json: { errors: 'not found' }, status: :not_found unless user
+
+    serializer = (@current_user.role == 'admin' ? UserDetailsSerializer : UserBasicDetailsSerializer)
+    render json: user, serializer: serializer, status: :ok
+  end
+
   private
   def user
     @user ||= User.find_by_id(params[:id])
