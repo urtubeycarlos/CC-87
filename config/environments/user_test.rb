@@ -1,10 +1,10 @@
-class User
-  def initialize(name="", lastname="")
-    @name = name
-    @lastname = lastname
+class Message
+  def initialize(message="")
+    @message = message
+    
   end
 
-  def full_name
-    "#{@name} #{@lastname}"
+  def full_message
+    "#{"said:"} #{@message}"
   end
 end
