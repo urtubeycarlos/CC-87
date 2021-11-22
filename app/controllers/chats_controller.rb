@@ -2,7 +2,7 @@ class ChatsController < ApplicationController
   before_action :authorize_request
 
   def index
-    all_chats = chats.paginate(page: params[:page], per_page: 10).oder('created_at ASC')
+    all_chats = chats.paginate(page: params[:page], per_page: 10).order('created_at ASC')
     return render json: '204 No Content', status: :no_content if !chats || all_chats.empty?
     render render json: all_chats, status: :ok
   end
