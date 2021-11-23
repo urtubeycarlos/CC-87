@@ -29,6 +29,8 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'rack-cors'
 # Authentication
 gem 'jwt'
+# Authorization
+gem 'cancancan'
 # Serialization
 gem 'active_model_serializers', '~> 0.10.12'
 # Soft delete
@@ -44,6 +46,9 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rubocop-rspec'
+  # Test
+  gem 'faker', '~> 2.18'
+  gem 'factory_bot_rails', '~> 6.2'
   gem 'database_cleaner'
   gem 'rspec-rails'
   # Swagger specs
