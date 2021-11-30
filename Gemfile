@@ -41,6 +41,9 @@ group :development do
   gem 'spring'
 end
 
+#minitest
+gem 'minitest', '~> 5.8', '>= 5.8.4'
+###
 group :test do
   gem 'rspec-rails', '~> 5.0', '>= 5.0.1'
   gem 'simplecov', '~> 0.21.2', require: false
