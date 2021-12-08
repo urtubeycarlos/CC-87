@@ -1,17 +1,20 @@
 class MessagesController < ApplicationController
   def index
-    @messages = Message.all  
+    @messages = Message.all
   end
 
   def create
+    puts params.inspect
     @message = Message.new(message_params)
     if @message.save
-      redirect_to conversation_messages_path(status: ok)
+       render "new"
     end
   end
 
 private
   def message_params
-    params.require(:message).permit(:user, :text)
+    params.require(:message).permit(:active)
+    params.require(:user).permit(:active)
+    params.require(:text).permit(:active)
   end
 end

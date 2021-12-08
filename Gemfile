@@ -14,7 +14,7 @@ gem 'puma', '~> 5.0'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
@@ -27,12 +27,32 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 gem 'rack-cors'
+# Authentication
+gem 'jwt'
+# Authorization
+gem 'cancancan'
+# Serialization
+gem 'active_model_serializers', '~> 0.10.12'
+# Soft delete
+gem 'paranoia', '~> 2.4', '>= 2.4.3'
+
+# Pagination
+gem 'will_paginate'
+
+# Swagger
+gem 'rswag'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rubocop-rspec'
+  # Test
+  gem 'faker', '~> 2.18'
+  gem 'factory_bot_rails', '~> 6.2'
   gem 'database_cleaner'
+  gem 'rspec-rails'
+  # Swagger specs
+  gem 'rswag-specs'
 end
 
 group :development do
@@ -45,7 +65,6 @@ end
 gem 'minitest', '~> 5.8', '>= 5.8.4'
 ###
 group :test do
-  gem 'rspec-rails', '~> 5.0', '>= 5.0.1'
   gem 'simplecov', '~> 0.21.2', require: false
   gem 'database_cleaner-active_record', '~> 2.0'
 end
