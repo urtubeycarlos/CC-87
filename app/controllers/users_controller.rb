@@ -9,7 +9,6 @@ class UsersController < ApplicationController
 
   def show
     return render json: { errors: 'not found' }, status: :not_found unless user
-
     serializer = (@current_user.role == 'admin' ? UserDetailsSerializer : UserBasicDetailsSerializer)
     render json: user, serializer: serializer, status: :ok
   end
